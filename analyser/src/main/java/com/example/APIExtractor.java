@@ -144,6 +144,8 @@ public class APIExtractor {
         } catch (Exception ignore) {}
         if (val != null) {
             val = val.replaceAll("^\"|\"$", ""); // Remove quotes
+            val = val.replaceAll("^\\{\\s*|\\s*\\}$", ""); // Remove braces - ADD THIS
+            val = val.replaceAll("^\"|\"$", ""); // Remove quotes again - ADD THIS
         }
         return val;
     }

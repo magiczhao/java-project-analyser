@@ -54,6 +54,7 @@ public class MethodCodeWriter {
     return s.replace("\\", "\\\\")
             .replace("\"", "\\\"")
             .replace("\n", "\\n")
-            .replace("\r", "");
+            .replace("\r", "")
+            .replace("\t", "\\t");
   }
 }
