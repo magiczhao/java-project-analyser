@@ -1,7 +1,9 @@
 import json
-ANTHROPIC_API_KEY = "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"
 from anthropic import Anthropic
-
+import dotenv
+import os
+dotenv.load_dotenv()
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
 client = Anthropic(api_key=ANTHROPIC_API_KEY)
 
 class TestCaseGenerator:
